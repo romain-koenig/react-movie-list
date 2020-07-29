@@ -27,11 +27,13 @@ class List extends Component {
 
     return (
       <>
-        <h1>Movie List !</h1>
+        <nav className='navbar sticky-top navbar-light bg-dark'>
+          <h1 className='navbar-brand text-light'>Movie List</h1>
+        </nav>
         <div className="row">
           {this.state.data.map(movie => {
             return (
-              <div className="col-sm-6 col-md-4 col-lg-2">
+              <div className="col-sm-12 col-md-6 col-lg-4">
                 <Card key={movie.id} movie={movie} />
               </div>
             )
