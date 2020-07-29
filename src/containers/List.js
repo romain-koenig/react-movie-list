@@ -28,7 +28,7 @@ class List extends Component {
 
     return (
       <>
-        <h1>This is the title of the List Component</h1>
+        <h1>Movie List !</h1>
         {this.state.data.map(movie => {
           return <Card key={movie.id} movie={movie} />
         })}
