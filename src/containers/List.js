@@ -16,11 +16,10 @@ class List extends Component {
 
   async componentDidMount() {
 
-
     console.log('Fetching data');
     //We're not really fetching the data, 
     //just getting it from a file...
-    this.setState({data: jsonData})
+    this.setState({ data: jsonData })
   }
 
 
@@ -29,9 +28,15 @@ class List extends Component {
     return (
       <>
         <h1>Movie List !</h1>
-        {this.state.data.map(movie => {
-          return <Card key={movie.id} movie={movie} />
-        })}
+        <div className="row">
+          {this.state.data.map(movie => {
+            return (
+              <div className="col-sm-6 col-md-4 col-lg-2">
+                <Card key={movie.id} movie={movie} />
+              </div>
+            )
+          })}
+        </div>
 
       </>
     );
